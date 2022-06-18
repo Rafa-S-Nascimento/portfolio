@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --clr-black-1: #000000;
+    --clr-black-2: #262626;
+    --clr-white-1: #ffffff;
+    --clr-white-2: #f1f5f8;
+    --clr-gray-1: #464646;
+    --clr-red-1: #ff00a9;
+    --clr-blue-1: #eaf2fd;
+    --clr-gold: #c59d5f;
+    --font-fam: "Roboto", sans-serif;
+    --transition: 500ms;
+}
+
+body {
+    font-family: var(--font-fam);
+    color: var(--clr-gray-1);
+    background-color: var(--clr-white-2);
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin-bottom: 0.85rem;
+}
+h1 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+header,
+main,
+footer {
+    width: 100vw;
+}
+.section-center {
+    width: 92vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+.titulo {
+    text-transform: capitalize;
+    text-align: center;
+}
+.border {
+    border: 3px solid var(--clr-gold);
+}
+
+/* header & nav */
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 1rem 0.5rem;
+}
+.container-navbar {
+    display: flex;
+    align-items: center;
+}
+.container-header p,
+.container-header h3 {
+    margin: 0;
+}
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    z-index: -10;
+    background-color: var(--clr-white-1);
+    transform: translate(-100%);
+    text-transform: capitalize;
+}
+.show-navbar {
+    z-index: 10;
+    transform: translate(0);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.links {
+    font-size: 1.5rem;
+    color: currentColor;
+    transition: all var(--transition);
+    margin-left: 1.5rem;
+}
+.links:hover {
+    scale: 1.2;
+    color: var(--clr-red-1);
+}
+.list {
+    padding: 1rem 1.5rem;
+    background-color: none;
+}
+.list a {
+    font-size: 1.5rem;
+    display: block;
+    color: var(--clr-gray-1);
+    transition: all var(--transition);
+    padding: 1rem 0;
+}
+.list a:hover {
+    color: var(--clr-white-1);
+    background-color: var(--clr-gray-1);
+    padding-left: 1rem;
+}
+/* end header & nav */
+
+/* presentation */
+.container-presentation {
+    padding: 1rem 0.5rem;
+}
+.img {
+    width: 95px;
+    height: 95px;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.container-presentation h1 {
+    font-weight: 700;
+}
+.container-presentation h3 {
+    font-weight: 400;
+}
+.container-presentation div div:last-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* end presentation */
+
+/* sobre */
+.container-sobre {
+    background-color: var(--clr-blue-1);
+    padding: 1rem 0.5rem;
+}
+
+/* end sobre */
+
+/* skills & hobbies */
+.container-skills,
+.container-hobbies,
+.container-formacao {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+}
+.format {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all var(--transition);
+}
+.item-skill {
+    justify-content: flex-end;
+    width: 156px;
+    height: 118px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.item-skill span:first-child {
+    font-size: 2rem;
+}
+.item-skill:hover {
+    color: var(--clr-white-2);
+    background-color: var(--clr-black-2);
+}
+/* end skills & hibbies */
+
+/* formacao */
+.container-formacao {
+    background-color: var(--clr-blue-1);
+}
+.item-formacao {
+    width: 296px;
+    padding: 1rem 0;
+}
+.item-formacao div,
+.item-formacao span {
+    margin-bottom: 0.4rem;
+}
+
+.item-formacao div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 118px;
+    background-color: var(--clr-white-1);
+    border-radius: 0.5rem;
+    padding: 0 25%;
+}
+.item-formacao div div {
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    border-radius: 0%;
+    padding: 0;
+}
+
+.item-formacao div div img {
+    width: 100%;
+    height: 100%;
+}
+
+/* end formacao */
+
+@media screen and (min-width: 536px) {
+    .section-center {
+        width: 90vw;
+    }
+    .container-presentation {
+        overflow: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .container-skills,
+    .container-hobbies,
+    .container-formacao {
+        padding: 2rem 0.5rem;
+    }
+    .img {
+        float: right;
+        width: 145px;
+        height: 145px;
+        margin-left: 1rem;
+    }
+    .item-skill,
+    .item-formacao {
+        width: 224px;
+    }
+}
+
+@media screen and (min-width: 856px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .container-presentation {
+        padding: 2rem 0.5rem;
+    }
+    .navbar {
+        position: static;
+        z-index: auto;
+        transform: translate(0);
+        background-color: var(--clr-white-2);
+        font-size: 1rem;
+        max-width: none;
+    }
+    .container-navbar {
+        display: flex;
+        align-items: center;
+    }
+    .navbar ul {
+        display: flex;
+    }
+    .list {
+        padding: 0;
+        margin-left: 1.5rem;
+    }
+    .list a {
+        font-size: 1rem;
+        display: block;
+        color: var(--clr-gray-1);
+        transition: all var(--transition);
+    }
+    .list a:hover {
+        color: var(--clr-gold);
+        padding-left: 0;
+        background-color: var(--clr-white-2);
+        scale: 1.2;
+    }
+
+    .img {
+        width: 255px;
+        height: 255px;
+        margin-left: 2rem;
+    }
+
+    .item-skill {
+        width: 176px;
+        height: 174px;
+    }
+
+    .container-formacao div:not(.item-formacao):not(.border) {
+        gap: 2rem;
+    }
+    .item-formacao div {
+        height: 224px;
+        padding: 25% 25%;
+    }
+    .item-formacao div div {
+        height: 100%;
+        width: 100%;
+    }
+}
