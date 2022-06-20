@@ -35,20 +35,34 @@
                                 <a href="#projetos">projetos</a>
                             </li>
                         </ul>
+                        <button class="close-navbar btn border">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
                     <a href="mailto:rafael_freedom@outlook.com" class="links">
                         <i class="fa-solid fa-envelope"></i
                     ></a>
                 </div>
             </nav>
+
+            <button class="open-navbar btn border">
+                <i class="fa-solid fa-hand-point-right"></i>
+            </button>
         </header>
         <main>
             <section class="container-presentation section-center">
-                <img src="./img/foto.jpg" alt="foto rosto" class="img border" />
+                <img
+                    src="./img/fotoPerfil.jpeg"
+                    alt="foto rosto"
+                    class="img border"
+                />
                 <div>
-                    <h1>Olá, meu nome é Rafael e eu desenvolvo páginas web!</h1>
+                    <h1>
+                        Olá, meu nome é Rafael, eu tenho 25 anos e desenvolvo
+                        páginas web!
+                    </h1>
                     <h3>
-                        Eu sou formado em técnologia em gestão financeira e
+                        Eu sou formado em tecnologia em gestão financeira e
                         atualmente estou participando do projeto Oracle ONE na
                         Alura.
                     </h3>
@@ -150,8 +164,8 @@
                                 />
                             </div>
                         </div>
-                        <span class="span bold">Curso</span>
-                        <span class="span">Data</span>
+                        <span class="span bold">Gestão Financeira</span>
+                        <span class="span">2022 - Brazcubas</span>
                     </div>
                     <div class="item-formacao box">
                         <div class="border">
@@ -162,8 +176,10 @@
                                 />
                             </div>
                         </div>
-                        <span class="span bold">Curso</span>
-                        <span class="span">Data</span>
+                        <span class="span bold"
+                            >Formação Front End F2T2 - ONE</span
+                        >
+                        <span class="span">Em andamento - Alura</span>
                     </div>
                     <div class="item-formacao box">
                         <div class="border">
@@ -174,8 +190,10 @@
                                 />
                             </div>
                         </div>
-                        <span class="span bold">Curso</span>
-                        <span class="span">Data</span>
+                        <span class="span bold"
+                            >Javascript Tutorial and Projects Course</span
+                        >
+                        <span class="span">Em andamento - Udemy</span>
                     </div>
                 </div>
             </section>
@@ -212,7 +230,7 @@
                                     >
                                 </button>
                                 <button class="btn border bold">
-                                    Ver demo
+                                    <a href="#demo">Ver demo</a>
                                 </button>
                             </div>
                         </div>
@@ -241,7 +259,7 @@
                                         >Repositório</a
                                     >
                                 </button>
-                                <button class="btn border bold">
+                                <button class="btn border bold ml">
                                     <a
                                         href="https://rafa-s-nascimento.github.io/challenge2/"
                                         target="_blank"
@@ -252,8 +270,129 @@
                         </div>
                     </div>
                 </div>
+                <!-- demo encriptador -->
+                <div class="container-prof demo" id="demo">
+                    <div class="container-demo">
+                        <div>
+                            <h3 class="titulo">código secreto</h3>
+                            <div class="exp-demo">
+                                <div
+                                    id="container-encriptar"
+                                    class="containers-encriptar"
+                                >
+                                    <span
+                                        >Apenas letras minusculas, sem
+                                        acento</span
+                                    >
+                                    <input
+                                        id="input-entrada"
+                                        type="text"
+                                        placeholder="insira o texto aqui"
+                                    />
+                                    <button
+                                        class="btn border bold"
+                                        id="btn-criptografar"
+                                    >
+                                        Criptografar!
+                                    </button>
+                                    <button
+                                        class="btn border bold"
+                                        id="btn-descriptografar"
+                                    >
+                                        Descriptografar!
+                                    </button>
+                                </div>
+                                <div
+                                    id="container-resultado"
+                                    class="containers-encriptar"
+                                >
+                                    <h3>Mensagem criptografada:</h3>
+                                    <input type="text" id="input-saida" />
+                                    <button class="btn border bold" id="copiar">
+                                        copiar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <span class="span bold"
+                                >Decodificador de texto</span
+                            >
+                            <span class="span"
+                                >Challenge Alura Codificador</span
+                            >
+                            <button class="btn border bold">
+                                <a
+                                    href="https://github.com/Rafa-S-Nascimento/challenge2"
+                                    target="_blank"
+                                    >Repositório</a
+                                >
+                            </button>
+                            <button class="btn border bold">
+                                <a
+                                    href="https://rafa-s-nascimento.github.io/challenge2/"
+                                    target="_blank"
+                                    >Ver projeto</a
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </section>
+            <section
+                class="container-contato section-center flex-col"
+                id="contato"
+            >
+                <h2 class="titulo">Contato</h2>
+                <div class="contato-item">
+                    <p>Quer entrar em contato comigo?</p>
+                    <p>
+                        Preencha o formulário abaixo e entrarei em contato o
+                        mais rápido possível!
+                    </p>
+                    <form action="#">
+                        <input
+                            type="text"
+                            name="nome"
+                            placeholder="Nome"
+                            maxlength="40"
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="E-mail"
+                            maxlength="40"
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="assunto"
+                            placeholder="Assunto"
+                            maxlength="20"
+                            required
+                        />
+                        <textarea
+                            name="mensagem"
+                            placeholder="Mensagem"
+                            maxlength="300"
+                            required
+                        ></textarea>
+                        <button class="btn border bold" type="submit">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <button class="home btn border">
+                <i class="fa-solid fa-hand-point-right"></i>
+            </button>
         </main>
-        <footer></footer>
+        <footer>
+            <p>Desenvolvido por Rafael Nascimento 2022</p>
+        </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
