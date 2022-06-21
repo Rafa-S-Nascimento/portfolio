@@ -140,8 +140,6 @@ inputEntrada.addEventListener("input", function (e) {
             backup.push(word);
             backup = inputEntrada.value.split("");
         }
-
-        console.log(backup);
     }
 });
 
