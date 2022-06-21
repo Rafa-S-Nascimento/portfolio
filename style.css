@@ -140,7 +140,6 @@ main {
     height: 100%;
     max-width: 400px;
     z-index: -10;
-    /* background-color: var(--clr-white-1); */
     background-color: var(--clr-black-2);
     transform: translate(-100%);
     text-transform: capitalize;
@@ -174,20 +173,16 @@ main {
 .list {
     border-bottom: 2px solid var(--clr-gold);
     padding-left: 0.5rem;
-
-    /* pinçar */
 }
 .list a {
     font-size: 1.5rem;
     display: block;
-    /* color: var(--clr-gray-1); */
     color: var(--clr-white-1);
     transition: all var(--transition);
     padding: 1rem 0;
 }
 .list a:hover {
     color: var(--clr-gold);
-    /* background-color: var(--clr-gray-1); */
     padding-left: 1rem;
 }
 /* end header & nav */
@@ -221,7 +216,6 @@ main {
     background-color: var(--clr-blue-1);
     padding: 1rem 0.5rem;
 }
-
 /* end sobre */
 
 /* skills & hobbies */
@@ -402,14 +396,12 @@ main {
     color: var(--clr-black-2) !important;
     border: 3px solid var(--clr-black-2);
 }
-
 /* end demo */
 /* end exp profissional */
 
 /* contato */
 .container-contato {
     align-items: center;
-    /* background-image: linear-gradient(var(--clr-blue-1), var(--clr-white-2)); */
 }
 .contato-item {
     width: 296px;
@@ -434,7 +426,6 @@ main {
 .contato-item form input::placeholder {
     font-style: italic;
 }
-
 /* end contato */
 
 /* footer */
@@ -459,12 +450,13 @@ footer {
     .flex-col {
         padding: 2rem 0.5rem;
     }
+
     .img {
-        float: right;
         width: 145px;
         height: 145px;
         margin-left: 1rem;
     }
+
     .item-skill,
     .item-formacao {
         width: 224px;
@@ -494,6 +486,7 @@ footer {
         background-color: var(--clr-white-1);
         box-shadow: var(--shadow);
     }
+
     .open-navbar,
     .close-navbar {
         display: none;
@@ -560,13 +553,11 @@ footer {
 
     .container-expProf .expItem:last-of-type {
         flex-direction: row-reverse;
-        /* padding-left: 1rem; */
     }
     .expItem {
         flex-direction: row;
         align-items: center;
         margin-bottom: 0.5rem;
-        /* background-color: var(--clr-white-1); */
         background-image: linear-gradient(
             var(--clr-white-2),
             var(--clr-white-1)
