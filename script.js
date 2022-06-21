@@ -134,11 +134,11 @@ inputEntrada.addEventListener("input", function (e) {
     if (e.data !== null) {
         let word = e.data.toLowerCase();
 
-        if (validar(word)) {
+        if (!validar(word)) {
+            inputEntrada.value = backup.join("");
+        } else {
             backup.push(word);
             backup = inputEntrada.value.split("");
-        } else {
-            inputEntrada.value = backup.join("");
         }
 
         console.log(backup);
@@ -146,9 +146,9 @@ inputEntrada.addEventListener("input", function (e) {
 });
 
 function validar(letra) {
-    const pattern = /[a-z]/;
+    const pattern = /[^a-z]/g;
 
-    if (letra.match(pattern)) {
+    if (!letra.match(pattern)) {
         return true;
     } else {
         return false;
@@ -159,7 +159,7 @@ function criptografar() {
     let texto = inputEntrada.value.toLowerCase();
     let resultado = "";
 
-    if (texto !== "") {
+    if (texto !== "" && validar(texto)) {
         resultado = texto.replaceAll(/a|e|i|o|u/g, function (x) {
             if (x == criptografia[0][0]) {
                 return criptografia[0][1];
@@ -182,7 +182,7 @@ function descriptografar() {
     let texto = inputEntrada.value;
     let resultado = "";
 
-    if (texto !== "") {
+    if (texto !== "" && validar(texto)) {
         resultado = texto.replaceAll(/ai|enter|imes|ober|ufat/g, function (x) {
             if (x == criptografia[0][1]) {
                 return criptografia[0][0];
