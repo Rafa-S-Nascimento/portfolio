@@ -156,7 +156,7 @@ function validar(letra) {
 }
 
 function criptografar() {
-    let texto = inputEntrada.value;
+    let texto = inputEntrada.value.toLowerCase();
     let resultado = "";
 
     if (texto !== "") {
