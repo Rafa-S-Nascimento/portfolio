@@ -134,22 +134,24 @@ inputEntrada.addEventListener("input", function (e) {
     if (e.data !== null) {
         let word = e.data.toLowerCase();
 
-        if (!validar(word)) {
-            inputEntrada.value = backup.join("");
-        } else {
+        if (validar(word)) {
             backup.push(word);
-            backup = inputEntrada.value.split("");
+            backup = this.value.split("");
+        } else {
+            this.value = backup.join("");
         }
+    }
+
+    if (this.value.length < backup.length) {
+        backup = this.value.split("");
     }
 });
 
 function validar(letra) {
-    const pattern = /[^a-z]/g;
+    const pattern = /[a-z]/;
 
-    if (!letra.match(pattern)) {
+    if (letra.match(pattern)) {
         return true;
-    } else {
-        return false;
     }
 }
 
